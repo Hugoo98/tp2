@@ -1,0 +1,602 @@
+/home/tachour/Bureau/Bureau/big_data_1/prog_concurrente/tp2/venv/bin/python /snap/pycharm-community/214/plugins/python-ce/helpers/pydev/pydevconsole.py --mode=client --port=44289
+import sys; print('Python %s on %s' % (sys.version, sys.platform))
+sys.path.extend(['/home/tachour/Bureau/Bureau/big_data_1/prog_concurrente/tp2'])
+PyDev console: starting.
+Python 3.8.5 (default, Jul 28 2020, 12:59:40) 
+[GCC 9.3.0] on linux
+2+2
+4
+50 -5*6
+20
+(50-5*6)/4
+5.0
+8/5
+1.6
+17/3
+5.666666666666667
+17//3
+5
+17%3
+2
+5*3+2
+17
+5**2
+25
+2**7
+128
+width=20
+height = 5*9
+width * height
+900
+spam = 1
+text = "# This is not a comment because it's inside quotes."
+text
+"# This is not a comment because it's inside quotes."
+spam
+1
+n
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+NameError: name 'n' is not defined
+4 * 3.75 -1
+14.0
+tax =12.5 /100
+price = 100.50
+price * tax 
+12.5625
+price + _
+113.0625
+round(_,2)
+113.06
+'spam eggs'
+'spam eggs'
+'doesn\'t'  # use \' to escape the single quote...
+"doesn't"
+"doesn't"  # ...or use double quotes instead
+"doesn't"
+'"Yes," he said.'
+'"Yes," he said.'
+"\"Yes,\" he said."
+'"Yes," he said.'
+'"Isn\'t," she said.'
+'"Isn\'t," she said.'
+'"Isn\'t," she said.'
+'"Isn\'t," she said.'
+print('"Isn\'t," she said.')
+"Isn't," she said.
+s = 'First line.\nSecond line.'  # \n means newline
+s  # without print(), \n is included in the output
+'First line.\nSecond line.'
+print(s)  # with print(), \n produces a new line
+First line.
+Second line.
+print('C:\some\name')  # here \n means newline!
+C:\some
+ame
+print(r'C:\some\name')  # note the r before the quote
+C:\some\name
+print("""\
+... Usage: thingy [OPTIONS]
+...      -h                        Display this usage message
+...      -H hostname               Hostname to connect to
+... """)
+Usage: thingy [OPTIONS]
+     -h                        Display this usage message
+     -H hostname               Hostname to connect to
+# 3 times 'un', followed by 'ium'
+3 * 'un' + 'ium'
+'unununium'
+'Py' 'thon'
+'Python'
+prefix = 'Py'
+>>> prefix 'thon'  # can't concatenate a variable and a string literal
+  File "<input>", line 1
+    >>> prefix 'thon'  # can't concatenate a variable and a string literal
+    ^
+SyntaxError: invalid syntax
+prefix 'thon'  # can't concatenate a variable and a string literal
+  File "<input>", line 1
+    prefix 'thon'  # can't concatenate a variable and a string literal
+           ^
+SyntaxError: invalid syntax
+('un' * 3) 'ium'
+  File "<input>", line 1
+    ('un' * 3) 'ium'
+               ^
+SyntaxError: invalid syntax
+text = ('Put several strings within parentheses '
+... ...         'to have them joined together.')
+... text
+  File "<input>", line 2
+    ...         'to have them joined together.')
+    ^
+SyntaxError: invalid syntax
+text
+"# This is not a comment because it's inside quotes."
+text = ('Put several strings within parentheses '
+... ...         'to have them joined together.')
+... text
+  File "<input>", line 2
+    ...         'to have them joined together.')
+    ^
+SyntaxError: invalid syntax
+text = ('Put several strings within parentheses '
+...          'to have them joined together.')
+text
+'Put several strings within parentheses to have them joined together.'
+word = 'Python'
+word[0]  # character in position 0
+'P'
+word[5]  # character in position 5
+'n'
+word[-1]  # last character
+'n'
+word[-2]  # second-last character
+'o'
+word[-6]
+'P'
+Salut[-6]
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+NameError: name 'Salut' is not defined
+word[-6]
+'P'
+word[:2] + word[2:]
+'Python'
+word[:4] + word[4:]
+'Python'
+word[0:2]  # characters from position 0 (included) to 2 (excluded)
+'Py'
+word[2:5]  # characters from position 2 (included) to 5 (excluded)
+'tho'
+word[2:6]  # characters from position 2 (included) to 5 (excluded)
+'thon'
+word[:2] + word[2:]
+'Python'
+word[:4] + word[4:]
+'Python'
+word[:2]  # character from the beginning to position 2 (excluded)
+'Py'
+word[4:]   # characters from position 4 (included) to the end
+'on'
+word[-2:]  # characters from the second-last (included) to the end
+'on'
+word[:-2]  # characters from the second-last (included) to the end
+'Pyth'
++---+---+---+---+---+---+
+...  | P | y | t | h | o | n |
+...  +---+---+---+---+---+---+
+... +---+---+---+---+---+---+
+...  | P | y | t | h | o | n |
+...  +---+---+---+---+---+---+
+...  
+...  
+...  
+...  +---+---+---+---+---+---+
+...  | P | y | t | h | o | n |
+...  +---+---+---+---+---+---+
+...  0   1   2   3   4   5   6
+... -6  -5  -4  -3  -2  -1
+  File "<input>", line 1
+    +---+---+---+---+---+---+
+                            ^
+SyntaxError: invalid syntax
+word[42]
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+IndexError: string index out of range
+word[4:42]
+'on'
+word[42:]
+''
+word[0] = 'J'
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+TypeError: 'str' object does not support item assignment
+word[2:] = 'py'
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+TypeError: 'str' object does not support item assignment
+'J' + word[1:]
+'Jython'
+word[1:]
+'ython'
+word[:]
+'Python'
+'J' + word[0:]
+'JPython'
+word[:2] + 'py'
+'Pypy'
+s = 'supercalifragilisticexpialidocious'
+len(s)
+34
+'autorisent les "guillemets"'
+'autorisent les "guillemets"'
+"autorisent les guillemets 'simples'"
+"autorisent les guillemets 'simples'"
+"""Trois guillemets"""
+'Trois guillemets'
+'''Trois guillemets simples'''
+'Trois guillemets simples'
+("spam " "eggs") == "spam eggs"
+True
+s[0] == s[0:1].
+... s[0] == s[0:1]
+  File "<input>", line 1
+    s[0] == s[0:1].
+                  ^
+SyntaxError: invalid syntax
+s[0] == s[0:1].
+... s[0] == s[0:1]
+  File "<input>", line 1
+    s[0] == s[0:1].
+                  ^
+SyntaxError: invalid syntax
+str(b'Zoot!')
+"b'Zoot!'"
+str(b'')
+"b''"
+str('b'Zoot!)
+  File "<input>", line 1
+    str('b'Zoot!)
+           ^
+SyntaxError: invalid syntax
+str(Zoot!'b')
+  File "<input>", line 1
+    str(Zoot!'b')
+            ^
+SyntaxError: invalid syntax
+str(z'Zoot!b')
+  File "<input>", line 1
+    str(z'Zoot!b')
+         ^
+SyntaxError: invalid syntax
+str(a'Zoot!b')
+  File "<input>", line 1
+    str(a'Zoot!b')
+         ^
+SyntaxError: invalid syntax
+str(b'Zoot!')
+"b'Zoot!'"
+str(b'Zoot!!')
+"b'Zoot!!'"
+str(b'Zoot')
+"b'Zoot'"
+str(b'zZoot')
+"b'zZoot'"
+str(b'fff:m')
+"b'fff:m'"
+str.capitalize()
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+TypeError: descriptor 'capitalize' of 'str' object needs an argument
+str.capitalize('jfhfjfk')
+'Jfhfjfk'
+str.casefold(hugoooo)
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+NameError: name 'hugoooo' is not defined
+str.casefold('hugoooo')
+'hugoooo'
+str.casefold('Hugoooo')
+'hugoooo'
+str.center(width[15, 'ldkdfbodvj'])
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+TypeError: 'int' object is not subscriptable
+str.center(width [15, 'ldkdfbodvjfhfh'])
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+TypeError: 'int' object is not subscriptable
+str.center(width [, 'ldkdfbodvjfhfh'])
+  File "<input>", line 1
+    str.center(width [, 'ldkdfbodvjfhfh'])
+                      ^
+SyntaxError: invalid syntax
+str.center(width [20, 'ldkdfbodvjfhfh'])
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+TypeError: 'int' object is not subscriptable
+str.center(20, 'ldkdfbodvjfhfh')
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+TypeError: descriptor 'center' for 'str' objects doesn't apply to a 'int' object
+str = "this is string example....wow!!!"
+str
+'this is string example....wow!!!'
+print "str.center(40, 'a') : ", str.center(40, 'a')
+  File "<input>", line 1
+    print "str.center(40, 'a') : ", str.center(40, 'a')
+          ^
+SyntaxError: invalid syntax
+print ("str.center(40, 'a') : ", str.center(40, 'a'))
+str.center(40, 'a') :  aaaathis is string example....wow!!!aaaa
+str = "this is string example....wow!!!";
+sub = "i";
+print "str.count(sub, 4, 40) : ", str.count(sub, 4, 40)
+  File "<input>", line 1
+    print "str.count(sub, 4, 40) : ", str.count(sub, 4, 40)
+          ^
+SyntaxError: invalid syntax
+print ("str.count(sub, 4, 40) : ", str.count(sub, 4, 40))
+str.count(sub, 4, 40) :  2
+sub = "wow";
+print ("str.count(sub) : ", str.count(sub))
+str.count(sub) :  1
+print ("str.count(sub) : ", str.count(sub,4,40))
+str.count(sub) :  1
+sub = "example";
+print ("str.count(sub) : ", str.count(sub,4,40))
+str.count(sub) :  1
+print ("str.count(sub) : ", str.count(sub,0,40))
+str.count(sub) :  1
+print ("str.count(sub) : ", str.count(sub,9,40))
+str.count(sub) :  1
+print ("str.count(sub) : ", str.count(sub,9,40))
+str.count(sub) :  1
+str = "this is string example....wow!!!";
+suffix = "wow!!!";
+print (str.endswith(suffix))
+True
+print (str.endswith(suffix,20))
+True
+suffix = "is";
+print str.endswith(suffix, 2, 4)
+  File "<input>", line 1
+    print str.endswith(suffix, 2, 4)
+          ^
+SyntaxError: invalid syntax
+print (str.endswith(suffix, 2, 4))
+True
+print ((str.endswith(suffix, 2, 4)))
+True
+print ((str.endswith(suffix, 2, 6)))
+False
+str = "this is\tstring example....wow!!!"
+print ("Original string: " + str)
+Original string: this is	string example....wow!!!
+print ("Defualt exapanded tab: " +  str.expandtabs())
+Defualt exapanded tab: this is string example....wow!!!
+print ("Double exapanded tab: " +  str.expandtabs(16))
+Double exapanded tab: this is         string example....wow!!!
+print ("Double exapanded tab: " +  str.expandtabs(30))
+Double exapanded tab: this is                       string example....wow!!!
+word = 'geeks for geeks'
+result = word.find('geeks')
+print ("Substring 'geeks' found at index:", result )
+Substring 'geeks' found at index: 0
+result = word.find('for') 
+print ("Substring 'for ' found at index:", result )
+Substring 'for ' found at index: 6
+'Py' in 'Python'
+True
+"The sum of 1 + 2 is {0}".format(1+2)
+'The sum of 1 + 2 is 3'
+"The sum of 1 + 2 is {0}".format(1+30)
+'The sum of 1 + 2 is 31'
+>>> class Default(dict):
+... ...     def __missing__(self, key):
+... ...         return key
+... ...
+... >>> '{name} was born in {country}'.format_map(Default(name='Guido'))
+  File "<input>", line 1
+    >>> class Default(dict):
+    ^
+SyntaxError: invalid syntax
+>>> class Default(dict):
+... ...     def __missing__(self, key):
+... ...         return key
+... ...
+... >>> '{name} was born in {country}'.format_map(Default(name='Guido'))
+  File "<input>", line 1
+    >>> class Default(dict):
+    ^
+SyntaxError: invalid syntax
+class Default(dict):
+...     def __missing__(self, key):
+...         return key
+... 
+... '{name} was born in {country}'.format_map(Default(name='Guido'))
+class Default(dict):
+...     def __missing__(self, key):
+...         return key
+...     
+>>> '{name} was born in {country}'.format_map(Default(name='Guido'))
+... 
+  File "<input>", line 1
+    >>> '{name} was born in {country}'.format_map(Default(name='Guido'))
+    ^
+SyntaxError: invalid syntax
+point = {'x':4,'y':-5}
+print('{x} {y}'.format(**point))
+4 -5
+... str1 = "this is string example....wow!!!";
+str2 = "exam";
+print (str1.index(str2))
+15
+print (str1.index(str2, 10))
+15
+print (str1.index(str2, 40))
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+ValueError: substring not found
+print (str1.index(str2, 5))
+15
+print (str1.index(str2, 5))
+15
+name = "M234onica"
+print(name.isalnum())
+... 
+True
+name = "M3onica Gell22er "
+... 
+print(name.isalnum())
+... 
+False
+name = "Mo3nicaGell22er"
+... 
+print(name.isalnum())
+... 
+True
+name = "133"
+... 
+print(name.isalnum())
+... 
+True
+print(name.isalnum())
+... 
+True
+name = "hugooo"
+print(name.isalnum())
+... 
+True
+str = "this";  # No space & digit in this string
+print str.isalpha()
+... 
+  File "<input>", line 1
+    print str.isalpha()
+          ^
+SyntaxError: invalid syntax
+str = "this";  # No space & digit in this string
+str = "this is string example....wow!!!";
+str = u"this2009";
+print str.isdecimal();
+  File "<input>", line 1
+    print str.isdecimal();
+          ^
+SyntaxError: invalid syntax
+print (str.isdecimal());
+False
+str = u"23443434";
+print str.isdecimal();
+  File "<input>", line 1
+    print str.isdecimal();
+          ^
+SyntaxError: invalid syntax
+print (str.isdecimal());
+True
+str = "123456";
+print (str.isdigit())
+True
+str = "this is string example....wow!!!";
+str = "this is string example....wow!!!";
+str = "123456";
+print (str.isdigit())
+True
+str = 'Python'
+print(str.isidentifier())
+True
+str = 'Py thon'
+print(str.isidentifier())
+False
+str = '22Python'
+print(str.isidentifier())
+False
+str = ''
+print(str.isidentifier())
+False
+str = "THIS is string example....wow!!!"; 
+print (str.islower())
+False
+str = "this is string example....wow!!!"; 
+print (str.islower())
+True
+str = u"this2009";
+print (str.isnumeric())
+False
+str = u"2009";
+print (str.isnumeric())
+True
+s = 'Space is a printable'
+print(s)
+Space is a printable
+print(s.isprintable())
+True
+s = '\nNew Line is printable'
+print(s)
+New Line is printable
+print(s.isprintable())
+False
+s = ''
+print(s.isprintable())
+True
+s = '   \t'
+print(s.isspace())
+True
+s = ' a '
+print(s.isspace())
+False
+s = ''
+print(s.isspace())
+False
+s = 'Python Is Good.'
+print(s.istitle())
+True
+s = 'Python is good'
+print(s.istitle())
+False
+s = 'This Is @ Symbol.'
+print(s.istitle())
+True
+s = '99 Is A Number'
+... 
+print(s.istitle())
+True
+s = 'PYTHON'
+... 
+print(s.istitle())
+False
+str = "THIS IS STRING EXAMPLE....WOW!!!"; 
+print (str.isupper())
+True
+str = "THIS IS STRING EXAmPLE....wOW!!!"; 
+print (str.isupper())
+False
+numList = ['1', '2', '3', '4']
+separator = ', '
+print(separator.join(numList))
+1, 2, 3, 4
+numTuple = ('1', '2', '3', '4')
+print(separator.join(numTuple))
+1, 2, 3, 4
+s1 = 'abc'
+s2 = '123'
+print('s1.join(s2):', s1.join(s2))
+s1.join(s2): 1abc2abc3
+print('s2.join(s1):', s2.join(s1))
+s2.join(s1): a123b123c
+str = "this is string example....wow!!!";
+print (str.ljust(50, '0'))
+this is string example....wow!!!000000000000000000
+str = "THIS IS STRING EXAMPLE....WOW!!!";
+print (str.lower())
+this is string example....wow!!!
+str = "     this is string example....wow!!!     ";
+print (str.lstrip())
+this is string example....wow!!!     
+str = "88888888this is string example....wow!!!8888888";
+print str.lstrip('8')
+  File "<input>", line 1
+    print str.lstrip('8')
+          ^
+SyntaxError: invalid syntax
+print (str.lstrip('8'))
+this is string example....wow!!!8888888
+print (str.lstrip())
+88888888this is string example....wow!!!8888888
+print (str.lstrip('8'))
+this is string example....wow!!!8888888
+dict = {"a": "123", "b": "456", "c": "789"}
+... 
+string = "abc"
+... 
+print(string.maketrans(dict))
+... 
+{97: '123', 98: '456', 99: '789'}
+dict = {97: "123", 98: "456", 99: "789"}
+... 
+string = "abc"
+... 
+print(string.maketrans(dict))
+... 
+{97: '123', 98: '456', 99: '789'}
